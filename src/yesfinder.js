@@ -245,7 +245,7 @@
 				$.each(data,function(i,v){
 					var ext = v.filename.substr(v.filename.lastIndexOf('.')),
 						imgsrc=that.iconurl+v.fileicon;
-					if('.jpg.jpeg.png.gif.bmp'.indexOf(ext)!==-1){
+					if('.jpg.jpeg.png.gif.bmp'.indexOf(ext.toLowerCase())!==-1){
 						imgsrc = that.folder=='/' ? that.baseurl:that.baseurl+that.folder+'/';
 						imgsrc +=v.filename;
 					}
