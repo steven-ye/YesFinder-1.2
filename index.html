@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>YesFinder - Web File Mananger</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="src/skins/yesfinder.css" rel="stylesheet">
+<link href="src/skins/smartMenu.css" rel="stylesheet">
+<script src="js/jquery-1.11.1.min.js"></script>
+</head>
+
+<body>
+  <div id="yesfinder"></div>
+<script src="src/jquery-smartMenu-min.js"></script>
+<script src="src/yesfinder.js"></script>
+<script>
+$(function(){
+	$('#yesfinder').yesFinder({
+	   url:'src/php/connector.php'
+	},function(file){
+	   /*You can put your code here to do something while selecting a file.*/
+	   /*parent.callback(file);*/
+	   alert('You chose the file: '+file);
+	});
+});
+
+var Request = {
+    QueryString : function(item){
+        var svalue = location.search.match(new RegExp("[\?\&]" + item + "=([^\&]*)(\&?)","i"));
+        return svalue ? svalue[1] : svalue;
+    }
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>YesFinder - Web File Mananger</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="src/skins/yesfinder.css" rel="stylesheet">
+<link href="src/skins/smartMenu.css" rel="stylesheet">
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="src/jquery-smartMenu-min.js"></script>
+<script src="src/yesfinder.js"></script>
+</head>
+
+<body>
+  <div id="yesfinder"></div>
+
+<script>
+  $(function(){
+	$('#yesfinder').yesFinder({url:'yesfinder.php'},function(file){parent.callback(file);});
+  });
+</script>
+</body>
+</html>
